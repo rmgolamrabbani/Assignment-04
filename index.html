@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -25,36 +26,39 @@
      <header class="w-[80%] mx-auto">
         <h1 class="text-4xl font-bold py-5 ">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-8 ">
-            <div class="bg-gray-100 p-4">
+            <div class="bg-gray-100 shadow-sm p-4">
                 <p class="font-semibold">Total</p>
-                <p id="total" class="font-bold">8</p>
+                <p id="total" class="font-bold">0</p>
             </div>
 
-            <div class="bg-gray-100 p-4">
+            <div class="bg-gray-100 shadow-sm p-4">
                 <p class="font-semibold">Interview</p>
-                <p id="Count" class="font-bold text-green-500">0</p>
+                <p id="interviewCaount" class="font-bold text-green-500">0</p>
             </div>
 
-            <div class="bg-gray-100 p-4">
-                <p class="font-semibold">Struggling</p>
-                <p id="strugglingCount" class="font-bold text-red-500">0</p>
+            <div class="bg-gray-100 shadow-sm  p-4">
+                <p class="font-semibold">Rejected</p>
+                <p id="rejectCount" class="font-bold text-red-500">0</p>
             </div>
         </div>
     </header>
     
     <hr class="w-[80%] mx-auto my-6 opacity-10">
 
+    <section id="filtered-section" class="hidden">
+    </section>
+
     <main class="w-[80%] mx-auto">
 
         <div class="flex justify-between my-4">
-            <h3>Available Jobs</h3>
-            <p>8 jobs</p>
+            <h3 class="text-2xl font-bold text-slate-900 ">Available Jobs</h3>
+            <p class="text-2xl font-bold text-slate-900 ">8 jobs</p>
         </div>
         
-        <div>
-            <button onclick="toggleStyle('all-filter-btn')"  class="bg-primary px-5 py-2 w-32" id="all-filter-btn">All</button>
-            <button onclick="toggleStyle('thriving-filter-btn')"  class="bg-gray-300  px-5 py-2 w-32 " id="thriving-filter-btn">Interview</button>
-            <button onclick="toggleStyle('struggling-filter-btn')"  class="bg-gray-300  px-5 py-2 w-32" id="struggling-filter-btn">Rejected</button>
+        <div class="space-x-1.5">
+            <button onclick="toggleStyle('all-filter-btn')" class="px-8 py-2.5 bg-blue-500 text-white font-medium rounded-lg shadow-sm w-32" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interviw-filter-btn')" class="px-8 py-2.5 bg-white text-slate-500 font-medium border border-gray-200 rounded-lg shadow-sm w-32 " id="interviw-filter-btn">Interview</button>
+            <button onclick="toggleStyle('reject-filter-btn')" class="px-8 py-2.5 bg-white text-slate-500 font-medium border border-gray-200 rounded-lg shadow-sm w-32" id="reject-filter-btn">Rejected</button>
         </div>
 
         <section id="allCards">
@@ -65,14 +69,14 @@
                   
                     <div>
                         <p class="jobName text-2xl font-semibold">Mobile First Corp</p>
-                        <p class="latinName opacity-50">React Native Developer</p>
+                        <p class="job-post opacity-50">React Native Developer</p>
                     </div>
 
-                        <p class="light opacity-50">Remote Full-time $130,000 - $175,000</p>
+                        <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
 
                     <div>
-                      <p class=" bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
-                      <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                      <p class=" stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
                         
                      
@@ -86,7 +90,7 @@
 
                 
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
                 </div>
             </div>
 
@@ -117,7 +121,7 @@
 
                 
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
                 </div>
             </div>
 
@@ -311,6 +315,7 @@
 
     </main>
 
+   
     <script src="script.js"></script>
 </body>
 </html>
