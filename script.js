@@ -86,7 +86,7 @@ mainContainer.addEventListener('click', function(event) {
         
         parenNode.querySelector('.stat').innerText = 'Interview';
         updateUI();
-        
+
         if (currentStatus === 'reject-filter-btn') renderReject();
     }
 
@@ -138,13 +138,51 @@ function renderInterview() {
     interviewList.forEach(item => {
         filterSection.appendChild(createCardHTML(item));
     });
-}
+
+
+    // no job condition
+    if (interviewList.length === 0) {
+        filterSection.innerHTML = `
+            <div class="card  border py-15 my-7 flex items-center  bg-gray-50 ">
+                
+            <div class="text-center">
+                <img class="w-1xl pl-25" src="/images/jobs.png" alt="">
+                <p class="text-2xl text-slate-800 font-semibold">No jobs available</p>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+                 
+            </div>
+        `;
+        return;
+    }
+
+   
+}   
+
+
 
 function renderReject() {
     filterSection.innerHTML = '';
     rejectList.forEach(item => {
         filterSection.appendChild(createCardHTML(item));
     });
+
+      // no job condition
+    if (interviewList.length === 0) {
+        filterSection.innerHTML = `
+            <div class="card  border py-15 my-7 flex items-center  bg-gray-50 ">
+                
+            <div class="text-center">
+                <img class="w-1xl pl-25" src="/images/jobs.png" alt="">
+                <p class="text-2xl text-slate-800 font-semibold">No jobs available</p>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+                 
+            </div>
+        `;
+        return;
+    }
+
 }
 
 // Helper to prevent code duplication in renders
