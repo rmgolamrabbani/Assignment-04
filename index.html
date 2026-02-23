@@ -45,22 +45,28 @@
     
     <hr class="w-[80%] mx-auto my-6 opacity-10">
 
-    <section id="filtered-section" class="hidden">
-    </section>
+    
 
     <main class="w-[80%] mx-auto">
 
         <div class="flex justify-between my-4">
-            <h3 class="text-2xl font-bold text-slate-900 ">Available Jobs</h3>
-            <p class="text-2xl font-bold text-slate-900 ">8 jobs</p>
+            <h3 class="text-1.5xl font-bold text-slate-900 ">Available Jobs</h3>
+            <div class="flex">
+                <p id="totalJob" class="text-1.5xl font-bold text-slate-900" >0</p>
+                <p class="text-1.5xl font-bold text-slate-900 pl-1">Jobs</p>
+            </div>
+            
         </div>
         
         <div class="space-x-1.5">
             <button onclick="toggleStyle('all-filter-btn')" class="px-8 py-2.5 bg-blue-500 text-white font-medium rounded-lg shadow-sm w-32" id="all-filter-btn">All</button>
-            <button onclick="toggleStyle('interviw-filter-btn')" class="px-8 py-2.5 bg-white text-slate-500 font-medium border border-gray-200 rounded-lg shadow-sm w-32 " id="interviw-filter-btn">Interview</button>
+            <button onclick="toggleStyle('interview-filter-btn')" class="px-8 py-2.5 bg-white text-slate-500 font-medium border border-gray-200 rounded-lg shadow-sm w-32 " id="interview-filter-btn">Interview</button>
             <button onclick="toggleStyle('reject-filter-btn')" class="px-8 py-2.5 bg-white text-slate-500 font-medium border border-gray-200 rounded-lg shadow-sm w-32" id="reject-filter-btn">Rejected</button>
         </div>
 
+        <section id="filtered-section" class="hidden">
+        </section>
+        
         <section id="allCards">
 
             <div class="card flex-row justify-between border p-8 my-6">
@@ -75,15 +81,140 @@
                         <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
 
                     <div>
-                      <p class=" stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
                       <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
                         
                      
 
                      <div class="flex gap-5">
-                        <button class="thriving-btn px-4 py-2 border text-green-500 ">Interview</button>
-                        <button class="struggling-btn border text-red-500 px-4 py-2">Rejected</button>
+                        <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
+                        <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
+                     </div>
+
+                </div>
+
+                
+                <div>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
+                </div>
+            </div>
+
+            <div class="card flex-row justify-between border p-8 my-6">
+                
+                <div class="space-y-3">
+                  
+                    <div>
+                        <p class="jobName text-2xl font-semibold">Mobile First Corp</p>
+                        <p class="job-post opacity-50">React Native Developer</p>
+                    </div>
+
+                        <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
+
+                    <div>
+                      <p class="stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                        
+                     
+
+                     <div class="flex gap-5">
+                        <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
+                        <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
+                     </div>
+
+                </div>
+
+                
+                <div>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
+                </div>
+            </div>
+
+            <div class="card flex-row justify-between border p-8 my-6">
+                
+                <div class="space-y-3">
+                  
+                    <div>
+                        <p class="jobName text-2xl font-semibold">Mobile First Corp</p>
+                        <p class="job-post opacity-50">React Native Developer</p>
+                    </div>
+
+                        <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
+
+                    <div>
+                      <p class="stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                        
+                     
+
+                     <div class="flex gap-5">
+                        <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
+                        <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
+                     </div>
+
+                </div>
+
+                
+                <div>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
+                </div>
+            </div>
+
+
+            <div class="card flex-row justify-between border p-8 my-6">
+                
+                <div class="space-y-3">
+                  
+                    <div>
+                        <p class="jobName text-2xl font-semibold">Mobile First Corp</p>
+                        <p class="job-post opacity-50">React Native Developer</p>
+                    </div>
+
+                        <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
+
+                    <div>
+                      <p class="stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                        
+                     
+
+                     <div class="flex gap-5">
+                        <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
+                        <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
+                     </div>
+
+                </div>
+
+                
+                <div>
+                    <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
+                </div>
+            </div>
+
+            <!-- <div class="card flex-row justify-between border p-8 my-6">
+                
+                <div class="space-y-3">
+                  
+                    <div>
+                        <p class="jobName text-2xl font-semibold">Mobile First Corp</p>
+                        <p class="job-post opacity-50">React Native Developer</p>
+                    </div>
+
+                        <p class="type-salary opacity-50">Remote Full-time $130,000 - $175,000</p>
+
+                    <div>
+                      <p class="stat bg-gray-300 w-fit py-1 px-2 ">Not Applied</p>
+                      <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                        
+                     
+
+                     <div class="flex gap-5">
+                        <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
+                        <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
                      </div>
 
                 </div>
@@ -309,7 +440,7 @@
                 <div>
                     <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
                 </div>
-            </div>
+            </div> -->
 
         </section>
 
