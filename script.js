@@ -18,7 +18,7 @@ let totalJob = document.getElementById('totalJob');
 
 // Calculation Function
 
-function updateUI() {
+function Calculation() {
     const totalCards = allCardSection.querySelectorAll('.card').length;
     if(total) total.innerText = totalCards;
     if(totalJob) totalJob.innerText = totalCards;
@@ -83,7 +83,7 @@ mainContainer.addEventListener('click', function(event) {
         rejectList = rejectList.filter(item => item.jobName !== jobName);
         
         parenNode.querySelector('.stat').innerText = 'Interview';
-        updateUI();
+        Calculation();
 
         if (currentStatus === 'reject-filter-btn') renderReject();
     }
@@ -110,7 +110,7 @@ mainContainer.addEventListener('click', function(event) {
         interviewList = interviewList.filter(item => item.jobName !== jobName);
 
         parenNode.querySelector('.stat').innerText = 'Rejected';
-        updateUI();
+        Calculation();
         if (currentStatus === 'interview-filter-btn') renderInterview();
     }
 
@@ -125,7 +125,7 @@ mainContainer.addEventListener('click', function(event) {
 
         if (currentStatus === 'interview-filter-btn') renderInterview();
         if (currentStatus === 'reject-filter-btn') renderReject();
-        updateUI();
+        Calculation();
     }
 });
 
@@ -211,5 +211,5 @@ function createCardHTML(data) {
 }
 
 
-updateUI();
+Calculation();
 
