@@ -58,12 +58,10 @@ function toggleStyle(id) {
     }
 }
 
-// Step-2: Main Event Delegation
+// Step-2: Main Event 
 mainContainer.addEventListener('click', function(event) {
     const target = event.target;
-
-    // Interview Button Logic
-
+    
     if (target.classList.contains('interview-btn')) {
         const parenNode = target.closest('.card');
         const jobName = parenNode.querySelector('.jobName').innerText;
@@ -143,7 +141,7 @@ function renderInterview() {
     // no job condition
     if (interviewList.length === 0) {
         filterSection.innerHTML = `
-            <div class="card  border py-15 my-7 flex items-center  bg-gray-50 ">
+            <div class="card py-15 my-7 flex items-center  bg-gray-50 ">
                 
             <div class="text-center">
                 <img class="w-1xl pl-25" src="/images/jobs.png" alt="">
@@ -170,7 +168,7 @@ function renderReject() {
       // no job condition
     if (interviewList.length === 0) {
         filterSection.innerHTML = `
-            <div class="card  border py-15 my-7 flex items-center  bg-gray-50 ">
+            <div class="card py-15 my-7 flex items-center  bg-gray-50 ">
                 
             <div class="text-center">
                 <img class="w-1xl pl-25" src="/images/jobs.png" alt="">
