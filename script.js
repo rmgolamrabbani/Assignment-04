@@ -2,7 +2,7 @@ let interviewList = [];
 let rejectList = [];
 let currentStatus = 'all-filter-btn';
 
-// DOM Elements
+
 let total = document.getElementById('total');
 const interviewCountDisplay = document.getElementById('interviewCaount'); 
 const rejectCountDisplay = document.getElementById('rejectCount');
@@ -187,7 +187,7 @@ function renderReject() {
 // Helper to prevent code duplication in renders
 function createCardHTML(data) {
     let div = document.createElement('div');
-    div.className = 'card flex-row justify-between border p-8 my-6';
+    div.className = 'card flex-row justify-between  bg-gray-50 shadow-sm p-8 my-6';
     div.innerHTML = `
         <div class="space-y-3">
             <div>
@@ -196,16 +196,16 @@ function createCardHTML(data) {
             </div>
             <p class="type-salary opacity-50">${data.typeSalary}</p>
             <div>
-                <p class="stat bg-gray-300 w-fit py-1 px-2 ">${data.stat}</p>
+                <p class="stat bg-gray-300 w-fit py-1 px-2 font-medium rounded-lg shadow-sm">${data.stat}</p>
                 <p class="description">${data.description}</p>
             </div>
             <div class="flex gap-5">
-                <button class="interview-btn px-4 py-2 border text-green-500 ">Interview</button>
-                <button class="reject-btn border text-red-500 px-4 py-2">Rejected</button>
+                <button class="interview-btn px-4 py-2 border text-green-500 font-medium rounded-lg shadow-sm ">Interview</button>
+                <button class="reject-btn border text-red-500 px-4 py-2 font-medium rounded-lg shadow-sm">Rejected</button>
             </div>
         </div>
         <div>
-            <button class="btn-delete border text-red-600 px-4 py-2">Delete</button>
+            <button class="btn-delete border text-red-600 px-4 py-2 font-medium rounded-lg shadow-sm ">Delete</button>
         </div>`;
     return div;
 }
